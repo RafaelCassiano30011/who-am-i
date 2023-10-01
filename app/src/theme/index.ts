@@ -1,12 +1,13 @@
 const theme = {
   colors: {
+    white_200: "rgba(255, 255, 255, 0.70);",
     white: "#FFFFFF",
     green_700: "#00875F",
-    green_500: "#00B37E",
+    cyan_500: "#01D1FF;",
     red: "#F75A68",
     red_dark: "#AA2834",
-    gray_700: "#121214",
-    gray_600: "#202024",
+    purple_500: "#6100FF",
+    purple_700: "#4500B5",
     gray_500: "#29292E",
     gray_400: "#323238",
     gray_300: "#7C7C8A",

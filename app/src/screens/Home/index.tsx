@@ -1,16 +1,19 @@
 /** @format */
 
-import { View, Text, Touchable, TouchableOpacity, TextInput } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import socket from "@utils/socket";
 import Body from "@components/Body";
+import * as S from "./styles";
+import Input from "@components/Input";
+import Button from "@components/Button";
+import Header from "@components/Header";
 
 export default function Home() {
   const [teste, setTeste] = useState([]);
   const [value, setValue] = useState("");
-  const get = async () => {
-    socket.emit("open", value);
-    setValue("");
+
+  const handleCreateRoom = () => {
+    socket.emit("crs", value);
 
     socket.on("open", (data: any) => {
       setTeste(data);
@@ -19,17 +22,17 @@ export default function Home() {
 
   return (
     <Body>
-      <TextInput
-        value={value}
-        style={{ height: 100, borderColor: "red", borderWidth: 1 }}
-        onChangeText={(e) => setValue(e)}
-      />
-      <TouchableOpacity onPress={get}>
-        <Text>Clique teste</Text>
-        {teste?.map((item, index) => (
-          <Text key={`teste-${index}`}>{item}</Text>
-        ))}
-      </TouchableOpacity>
+      <S.Container>
+        <Header />
+        <S.BoxUser>
+          <Input placeholder="Coloque Seu Nome" />
+        </S.BoxUser>
+
+        <S.BoxButtons>
+          <Button title="Entrar em uma sala" />
+          <Button onPress={handleCreateRoom} title="Criar Sala" />
+        </S.BoxButtons>
+      </S.Container>
     </Body>
   );
 }

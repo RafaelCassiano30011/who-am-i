@@ -8,7 +8,7 @@ export default function Routes() {
   const theme = useTheme();
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: theme.colors.gray_600 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: theme.colors.purple_500 }}>
       <NavigationContainer>
         <AppRoutes />
       </NavigationContainer>

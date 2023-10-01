@@ -1,7 +1,7 @@
 /** @format */
 
 import { httpServer } from "./http";
-import "./websocket";
+import "../socket/websocket";
 
 httpServer.listen(3000, () => {
   console.log("Rodando...");
