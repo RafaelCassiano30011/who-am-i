@@ -3,7 +3,7 @@ const theme = {
     white_200: "rgba(255, 255, 255, 0.70);",
     white: "#FFFFFF",
     green_700: "#00875F",
-    cyan_500: "#01D1FF;",
+    cyan_500: "#01D1FF",
     red: "#F75A68",
     red_dark: "#AA2834",
     purple_500: "#6100FF",

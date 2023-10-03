@@ -1,5 +1,3 @@
-/** @format */
-
 import { TouchableOpacityProps } from "react-native";
 
 import React from "react";
@@ -13,7 +11,9 @@ interface ButtonProps extends TouchableOpacityProps {
 export default function Button({ type = "primary", title, ...rest }: ButtonProps) {
   return (
     <S.Container type={type} {...rest}>
+      <S.Triangle type={"left"} />
       <S.Title>{title}</S.Title>
+      <S.Triangle type={"right"} />
     </S.Container>
   );
 }

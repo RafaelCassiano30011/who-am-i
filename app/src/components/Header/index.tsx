@@ -5,7 +5,7 @@ type HeaderProps = {
   showBackButton?: boolean;
 };
 
-export default function index({}: HeaderProps) {
+export default function Header({}: HeaderProps) {
   return (
     <S.Container>
       <S.Logo source={logoImg} />

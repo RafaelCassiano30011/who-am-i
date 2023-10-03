@@ -7,6 +7,7 @@ import * as S from "./styles";
 import Input from "@components/Input";
 import Button from "@components/Button";
 import Header from "@components/Header";
+import UseImage from "@components/UserImage";
 
 export default function Home() {
   const [teste, setTeste] = useState([]);
@@ -23,8 +24,9 @@ export default function Home() {
   return (
     <Body>
       <S.Container>
-        <Header />
+      <Header />
         <S.BoxUser>
+          <UseImage />
           <Input placeholder="Coloque Seu Nome" />
         </S.BoxUser>
 
